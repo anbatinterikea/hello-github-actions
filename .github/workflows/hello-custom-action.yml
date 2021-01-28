@@ -18,4 +18,4 @@ jobs:
     - name: Run the private action
       uses: ./custom/.github/actions/hello-world/
       with:
-        who-to-greet: "Test calling custom action in another repo"
+        firstGreeting: "Test calling custom action in another repo"
