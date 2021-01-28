@@ -14,7 +14,8 @@ jobs:
         repository: anbatinterikea/write-docker-actions
         ref: refs/heads/main
         token: ${{ secrets.anbatinterikea_PAT }} # secret that contains your PAT to clone that private repo
+        path: 'custom'
     - name: Run the private action
-      uses: ./
+      uses: ./custom/.github/actions/hello-world/
       with:
         who-to-greet: "Test calling custom action in another repo"
