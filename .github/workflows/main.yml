@@ -9,7 +9,9 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Andrew"
-      - run: echo "$TAG"
-        shell: pwsh
+      - run: |
+          echo $TAG
+          echo ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $GITHUB_RUN_NUMBER
+        shell: bash
         env:
           TAG: ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $GITHUB_RUN_NUMBER
