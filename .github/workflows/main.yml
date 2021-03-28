@@ -14,4 +14,4 @@ jobs:
           echo B: ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $env:GITHUB_RUN_NUMBER
         shell: pwsh
         env:
-          TAG: $(GITHUB_RUN_NUMBER), ${{ github.run.number }}
+          TAG: ${{ github.run_number }}
