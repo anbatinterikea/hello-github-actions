@@ -12,6 +12,6 @@ jobs:
       - run: |
           echo $TAG
           echo ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $GITHUB_RUN_NUMBER
-        shell: bash
+        shell: pwsh
         env:
           TAG: ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $GITHUB_RUN_NUMBER
