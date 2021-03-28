@@ -10,8 +10,8 @@ jobs:
         with:
           MY_NAME: "Andrew"
       - run: |
-          Write-Host "$env:TAG - $env:GITHUB_RUN_NUMBER"
-          echo ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $env.GITHUB_RUN_NUMBER
+          Write-Host "A: $env:TAG - $env:GITHUB_RUN_NUMBER"
+          echo B: ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $env:GITHUB_RUN_NUMBER
         shell: pwsh
         env:
           TAG: ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $env.GITHUB_RUN_NUMBER
