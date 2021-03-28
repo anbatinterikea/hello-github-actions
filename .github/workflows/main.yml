@@ -9,3 +9,5 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Andrew"
+      - run: echo "${{ github.run.number }} - ${{ GITHUB_RUN_NUMBER }} - ${{ env.GITHUB_RUN_NUMBER }}"
+        shell: pwsh
