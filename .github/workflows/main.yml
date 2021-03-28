@@ -10,7 +10,7 @@ jobs:
         with:
           MY_NAME: "Andrew"
       - run: |
-          echo $TAG
+          $TAG
           echo ${{ github.run.number }} - ${{ env.GITHUB_RUN_NUMBER }} - $GITHUB_RUN_NUMBER
         shell: pwsh
         env:
